@@ -3,7 +3,7 @@ const CFG={
  whatsapp:"923148877500",
  phone:"+923148877500", phoneShow:"+92 314 8877500",           // country code + number, no + or spaces
  email:"samaniftikharit@gmail.com",
- eliteUrl:"https://elite-solutions-pearl.vercel.app/",                     // link of Elite Solutions website
+ eliteUrl:"https://www.elitesols.com/",                     // link of Elite Solutions website
  social:{facebook:"https://www.facebook.com/share/18b7rfRdz6/",instagram:"https://www.instagram.com/marsmarketingoffice/",linkedin:"#"},   // paste full profile links here
  photo:"",                          // Saman's photo: image link or base64 data URI (leave empty to show the illustration)
  clients:[
