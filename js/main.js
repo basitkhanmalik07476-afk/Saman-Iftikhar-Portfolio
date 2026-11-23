@@ -70,6 +70,18 @@ addEventListener("pointerdown",e=>{if(e.pointerType==="mouse")add(e.clientX,e.cl
 })();
 /* About photo reuses the hero photo */
 {const hp=$("#pt img"),ai=$("#abimg");if(hp&&ai)ai.src=hp.src}
+/* client / customer showcase */
+{
+ const grid=$("#clientGrid");
+ if(grid&&CFG.clients){
+  grid.innerHTML=CFG.clients.map((c,i)=>{
+   const profile=c.image?`<img src="${c.image}" alt="${c.name}">`:`<span>${c.initial}</span>`;
+   const link=c.link?`<a class="client-link facebook" href="${c.link}" target="_blank" rel="noopener"><svg class="ico"><use href="#i-fb"/></svg><span>Visit Facebook</span><svg class="ico client-arrow"><use href="#i-up"/></svg></a>`:'<span class="client-link client-coming"><svg class="ico"><use href="#i-fb"/></svg><span>Visit Facebook</span></span>';
+   return `<article class="client-card rv" style="--d:${i}"><div class="client-profile">${profile}</div><div class="client-info"><h3>${c.name}</h3><p>${c.type}</p></div>${link}</article>`;
+  }).join("");
+  $$(".client-card").forEach(el=>io.observe(el));
+ }
+}
 /* before / after */
 const ba=$("#ba");$("input",ba).addEventListener("input",e=>ba.style.setProperty("--p",e.target.value+"%"));
 /* pricing with rolling numbers */
